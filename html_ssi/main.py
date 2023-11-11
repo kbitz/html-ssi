@@ -9,8 +9,8 @@ parser.add_argument("-s", "--source", help="source directory (must container fol
 parser.add_argument("-d", "--destination", help="destination directory", required=True, type=PathType(exists=True, type='dir'))
 args = parser.parse_args()
 
-include_str_exp = r'\<!-- %include\s.*\s\-->'
-include_file_exp = r'(?<=\<!-- %include\s)(.*)(?=\s\-->)'
+include_str_exp = r'\<!-- %include%\s.*\s\-->'
+include_file_exp = r'(?<=\<!-- %include%\s)(.*)(?=\s\-->)'
 include_dir = '_includes/'
 
 # for each file, find all include statments
