@@ -8,7 +8,19 @@ This script is intended to provide simple server side includes to regular HTML f
 
 Simply provide the source directory that contains your HTML files containing include statements, and the directory where you would like the resulting html files to be written. The include files should be inside the source directory in a folder called `_includes`.
 
+Example:
+
+```python html-ssi.py /path/to/source_dir /path/to/dest_dir```
+
 The syntax for an include statment is `<!-- %include% file_to_include.html -->`. We are wrapping the statement in an HTML comment so that the files still present as valid HTML should you be using some kind of validation or linting tool.
+
+## Testing
+
+Run the test script to verify functionality:
+
+```python3 test.py```
+
+This clears the `test_destination` folder and runs the script using `test_source` as input.
 
 ## License
 
